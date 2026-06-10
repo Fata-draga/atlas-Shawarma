@@ -3,15 +3,15 @@ import backround from "./assets/backround.png";
 
 export default function App() {
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div id="top" className="bg-black text-white min-h-screen">
       <nav className="border-b border-yellow-500/30 bg-black/95 backdrop-blur sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-          <div className="flex items-center gap-3">
-            <img src={logo} alt="Atlas Shawarma" className="h-12 md:h-20 w-auto" />
-            <h1 className="text-xl md:text-3xl font-black">
+        <div className="max-w-7xl mx-auto px-3 md:px-4 py-3 flex justify-between items-center">
+          <a href="#top" className="flex items-center gap-2 md:gap-3">
+            <img src={logo} alt="Atlas Shawarma" className="h-10 md:h-16 w-auto" />
+            <h1 className="text-lg md:text-3xl font-black leading-tight">
               Atlas <span className="text-yellow-400">Shawarma</span>
             </h1>
-          </div>
+          </a>
 
           <div className="flex gap-3 md:gap-8 text-xs md:text-base font-bold">
             <a href="#menu" className="hover:text-yellow-400">Menu</a>
@@ -21,50 +21,43 @@ export default function App() {
         </div>
       </nav>
 
-    <section
-  className="
-    relative 
-    min-h-[60vh] md:min-h-[calc(100vh-80px)]
-    flex items-end 
-    bg-contain bg-no-repeat bg-center
-    overflow-hidden
-  "
-  style={{
-    backgroundImage: `url(${backround})`,
-  }}
->
-  <div className="absolute inset-0 bg-black/25 md:bg-black/10"></div>
+      <section className="bg-black pt-6 md:pt-10">
+        <div className="max-w-7xl mx-auto px-0 md:px-6">
+          <img
+            src={backround}
+            alt="Atlas Shawarma fresh halal food in Reading"
+            className="w-full h-auto block"
+          />
 
-  <div className="relative max-w-7xl mx-auto px-4 md:px-6 pb-6 md:pb-10 w-full">
-    <div className="flex flex-col sm:flex-row gap-3 md:gap-4 max-w-md">
-      <a
-        href="#menu"
-        className="bg-yellow-400 text-black px-6 md:px-6 py-3 md:py-4 rounded-xl font-black text-base md:text-base hover:bg-yellow-300 text-center"
-      >
-        View Menu
-      </a>
+          <div className="px-4 md:px-0 mt-5 flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
+            <a
+              href="#menu"
+              className="bg-yellow-400 text-black px-6 md:px-8 py-3 rounded-xl font-black text-base md:text-lg hover:bg-yellow-300 text-center"
+            >
+              View Menu
+            </a>
 
-      <a
-        href="#location"
-        className="border-2 border-yellow-400 bg-black/75 px-6 md:px-8 py-3 md:py-4 rounded-xl font-black text-base md:text-lg hover:bg-yellow-400 hover:text-black text-center"
-      >
-        Get Directions
-      </a>
-    </div>
-  </div>
-</section>
+            <a
+              href="#location"
+              className="border-2 border-yellow-400 bg-black px-6 md:px-8 py-3 rounded-xl font-black text-base md:text-lg hover:bg-yellow-400 hover:text-black text-center"
+            >
+              Get Directions
+            </a>
+          </div>
+        </div>
+      </section>
 
-      <section id="menu" className="py-20 px-6">
+      <section id="menu" className="py-16 md:py-20 px-4 md:px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-5xl md:text-7xl font-black mb-6">
+          <h2 className="text-4xl md:text-7xl font-black mb-6">
             Our <span className="text-yellow-400">Menu</span>
           </h2>
 
-          <p className="text-gray-300 text-xl mb-10">
+          <p className="text-gray-300 text-lg md:text-xl mb-10">
             Fresh shawarma, plates, wraps, pizza, fatayer, roast chicken, sides and drinks.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-6 text-left">
+          <div className="grid md:grid-cols-3 gap-4 md:gap-6 text-left">
             {[
               ["Chicken Shawarma Wrap", "£5.50"],
               ["Lamb Shawarma Wrap", "£6.00"],
@@ -75,23 +68,23 @@ export default function App() {
             ].map(([item, price]) => (
               <div
                 key={item}
-                className="bg-zinc-950 border border-yellow-500/30 rounded-2xl p-6 flex justify-between gap-4"
+                className="bg-zinc-950 border border-yellow-500/30 rounded-2xl p-5 md:p-6 flex justify-between gap-4"
               >
-                <h3 className="text-xl font-black text-white">{item}</h3>
-                <p className="text-yellow-400 font-black text-xl">{price}</p>
+                <h3 className="text-lg md:text-xl font-black text-white">{item}</h3>
+                <p className="text-yellow-400 font-black text-lg md:text-xl">{price}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="about" className="py-20 px-6 bg-zinc-950">
+      <section id="about" className="py-16 md:py-20 px-4 md:px-6 bg-zinc-950">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-5xl md:text-7xl font-black mb-6">
+          <h2 className="text-4xl md:text-7xl font-black mb-6">
             Why Choose <span className="text-yellow-400">Atlas?</span>
           </h2>
 
-          <p className="text-gray-300 text-xl leading-relaxed">
+          <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
             Atlas Shawarma serves fresh, authentic halal food in the heart of Reading.
             From chicken and lamb shawarma to wraps, plates, pizza, fatayer, roast chicken
             and desserts, every meal is prepared with quality ingredients, bold flavours
@@ -100,12 +93,12 @@ export default function App() {
         </div>
       </section>
 
-      <section id="location" className="py-20 px-6 text-center">
-        <h2 className="text-5xl md:text-7xl font-black mb-6">
+      <section id="location" className="py-16 md:py-20 px-4 md:px-6 text-center">
+        <h2 className="text-4xl md:text-7xl font-black mb-6">
           Find <span className="text-yellow-400">Us</span>
         </h2>
 
-        <p className="text-gray-300 text-xl mb-8">
+        <p className="text-gray-300 text-lg md:text-xl mb-8">
           349 Oxford Road, Reading RG30 1AY
         </p>
 
@@ -122,7 +115,7 @@ export default function App() {
         </div>
       </section>
 
-      <footer className="border-t border-yellow-500/20 py-8 text-center text-gray-400">
+      <footer className="border-t border-yellow-500/20 py-8 px-4 text-center text-gray-400">
         © 2026 Atlas Shawarma • 349 Oxford Road, Reading RG30 1AY
       </footer>
     </div>
