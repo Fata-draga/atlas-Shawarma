@@ -39,7 +39,7 @@ export default function App() {
     <div className="flex flex-col sm:flex-row gap-3 md:gap-4 max-w-md">
       <a
         href="#menu"
-        className="bg-yellow-400 text-black px-6 md:px-8 py-3 md:py-4 rounded-xl font-black text-base md:text-lg hover:bg-yellow-300 text-center"
+        className="bg-yellow-400 text-black px-6 md:px-6 py-3 md:py-4 rounded-xl font-black text-base md:text-base hover:bg-yellow-300 text-center"
       >
         View Menu
       </a>
