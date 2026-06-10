@@ -7,13 +7,13 @@ export default function App() {
       <nav className="border-b border-yellow-500/30 bg-black/95 backdrop-blur sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="Atlas Shawarma" className="h-14 md:h-20 w-auto" />
+            <img src={logo} alt="Atlas Shawarma" className="h-12 md:h-20 w-auto" />
             <h1 className="text-xl md:text-3xl font-black">
               Atlas <span className="text-yellow-400">Shawarma</span>
             </h1>
           </div>
 
-          <div className="flex gap-4 md:gap-8 text-sm md:text-base font-bold">
+          <div className="flex gap-3 md:gap-8 text-xs md:text-base font-bold">
             <a href="#menu" className="hover:text-yellow-400">Menu</a>
             <a href="#about" className="hover:text-yellow-400">About</a>
             <a href="#location" className="hover:text-yellow-400">Location</a>
@@ -21,26 +21,32 @@ export default function App() {
         </div>
       </nav>
 
-     <section
-  className="relative min-h-[88vh] flex items-end bg-cover bg-center overflow-hidden"
+    <section
+  className="
+    relative 
+    min-h-[60vh] md:min-h-[calc(100vh-80px)]
+    flex items-end 
+    bg-contain bg-no-repeat bg-center
+    overflow-hidden
+  "
   style={{
     backgroundImage: `url(${backround})`,
   }}
 >
-  <div className="absolute inset-0 bg-black/10"></div>
+  <div className="absolute inset-0 bg-black/25 md:bg-black/10"></div>
 
-  <div className="relative max-w-7xl mx-auto px-6 pb-10 w-full">
-    <div className="flex flex-col sm:flex-row gap-4">
+  <div className="relative max-w-7xl mx-auto px-4 md:px-6 pb-6 md:pb-10 w-full">
+    <div className="flex flex-col sm:flex-row gap-3 md:gap-4 max-w-md">
       <a
         href="#menu"
-        className="bg-yellow-400 text-black px-8 py-4 rounded-xl font-black text-lg hover:bg-yellow-300 text-center"
+        className="bg-yellow-400 text-black px-6 md:px-8 py-3 md:py-4 rounded-xl font-black text-base md:text-lg hover:bg-yellow-300 text-center"
       >
         View Menu
       </a>
 
       <a
         href="#location"
-        className="border-2 border-yellow-400 bg-black/70 px-8 py-4 rounded-xl font-black text-lg hover:bg-yellow-400 hover:text-black text-center"
+        className="border-2 border-yellow-400 bg-black/75 px-6 md:px-8 py-3 md:py-4 rounded-xl font-black text-base md:text-lg hover:bg-yellow-400 hover:text-black text-center"
       >
         Get Directions
       </a>
