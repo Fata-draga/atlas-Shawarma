@@ -7,7 +7,7 @@ function NavLink({ to, children, navigate, activePath }) {
     <button
       type="button"
       onClick={() => navigate(to)}
-      className={`transition hover:text-gold-light ${
+      className={`whitespace-nowrap text-[0.72rem] transition hover:text-gold-light min-[380px]:text-xs sm:text-base ${
         isActive ? "text-gold-light" : "text-white"
       }`}
     >
@@ -19,24 +19,25 @@ function NavLink({ to, children, navigate, activePath }) {
 function Header({ navigate, activePath }) {
   return (
     <header className="sticky top-0 z-50 border-b border-gold/25 bg-black/95 backdrop-blur">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-2 overflow-hidden px-3 py-2 sm:gap-4 sm:px-6 sm:py-3">
         <button
           type="button"
           onClick={() => navigate("/")}
           aria-label="Go to homepage"
-          className="flex min-w-0 items-center gap-3 text-left transition hover:text-gold-light"
+          className="flex shrink-0 items-center gap-2 text-left transition hover:text-gold-light sm:gap-3"
         >
           <img
             src={logo}
             alt="Atlas Shawarma logo"
-            className="h-12 w-12 shrink-0 rounded-full object-contain sm:h-14 sm:w-14"
+            className="h-9 w-9 shrink-0 rounded-full object-contain sm:h-14 sm:w-14"
           />
-          <span className="truncate text-lg font-black leading-tight sm:text-2xl">
-            Atlas <span className="text-gold-light">Shawarma</span>
+          <span className="text-base font-black leading-tight sm:text-2xl">
+            <span>Atlas</span>
+            <span className="hidden sm:inline"> <span className="text-gold-light">Shawarma</span></span>
           </span>
         </button>
 
-        <div className="flex shrink-0 items-center gap-3 text-sm font-bold sm:gap-6 sm:text-base">
+        <div className="flex min-w-0 shrink items-center justify-end gap-2 font-bold min-[380px]:gap-3 sm:shrink-0 sm:gap-6">
           <NavLink to="/menu" navigate={navigate} activePath={activePath}>
             Menu
           </NavLink>

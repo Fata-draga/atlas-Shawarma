@@ -19,11 +19,11 @@ function MenuPage() {
           </p>
         </PageHeading>
 
-        <div className="mt-8 overflow-x-auto rounded-lg border border-gold/30 bg-white p-2 shadow-gold-glow-sm sm:p-4">
+        <div className="mt-8 overflow-visible rounded-lg border border-gold/30 bg-white p-2 shadow-gold-glow-sm sm:p-4">
           <img
             src={menuImage}
             alt="Atlas Shawarma full menu"
-            className="mx-auto h-auto w-full min-w-[680px] max-w-none object-contain sm:min-w-0"
+            className="mx-auto h-auto w-full max-w-full object-contain"
           />
         </div>
       </div>
