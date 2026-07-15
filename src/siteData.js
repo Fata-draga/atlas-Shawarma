@@ -2,6 +2,8 @@ export const address = "Atlas Shawarma, 349 Oxford Road, Reading RG30 1AY";
 export const openingHours = "10:00 AM - 11:00 PM daily";
 export const phoneNumber = "0118 323 1717";
 export const phoneHref = "tel:01183231717";
+export const emailAddress = "atlasshawarma.uk@gmail.com";
+export const emailHref = "mailto:atlasshawarma.uk@gmail.com";
 
 export const googleMapsListingUrl = "https://share.google/XCht8f3esCNTT306X";
 

@@ -1,4 +1,5 @@
 import logo from "../assets/logo.png";
+import { emailAddress, emailHref, phoneHref, phoneNumber } from "../siteData";
 
 function NavLink({ to, children, navigate, activePath }) {
   const isActive = activePath === to;
@@ -59,6 +60,15 @@ function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-3">
         <img src={logo} alt="Atlas Shawarma logo" className="h-10 w-10 rounded-full object-contain" />
         <p className="text-sm text-gray-300">© 2026 Atlas Shawarma. All Rights Reserved.</p>
+        <p className="text-sm leading-6 text-gray-400">
+          <a className="text-gold-light hover:underline" href={phoneHref}>
+            {phoneNumber}
+          </a>
+          <span className="mx-2 text-gold/50">|</span>
+          <a className="text-gold-light hover:underline" href={emailHref}>
+            {emailAddress}
+          </a>
+        </p>
         <p className="text-sm leading-6 text-gray-400">
           Designed & Developed by
           <br />

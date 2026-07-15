@@ -1,5 +1,5 @@
 import { Phone } from "lucide-react";
-import flyerImage from "../assets/backround.png";
+import flyerImage from "../assets/hero-shawarma.webp";
 import {
   googleMapsDirectionsUrl,
   googleMapsListingUrl,

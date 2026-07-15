@@ -3,6 +3,8 @@ import {
   googleMapsDirectionsUrl,
   googleMapsEmbedUrl,
   googleMapsListingUrl,
+  emailAddress,
+  emailHref,
   openingHours,
   phoneHref,
   phoneNumber,
@@ -28,6 +30,12 @@ function LocationPage() {
               <h2 className="font-black text-white">Phone</h2>
               <a className="mt-1 inline-block text-gold-light hover:underline" href={phoneHref}>
                 {phoneNumber}
+              </a>
+            </div>
+            <div>
+              <h2 className="font-black text-white">Email</h2>
+              <a className="mt-1 inline-block text-gold-light hover:underline" href={emailHref}>
+                {emailAddress}
               </a>
             </div>
           </div>
